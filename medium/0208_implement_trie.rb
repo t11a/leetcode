@@ -14,19 +14,13 @@ end
 
 class Trie
 
-=begin
-    Initialize your data structure here.
-=end
     def initialize()
         @root = TrieNode.new('*')
     end
 
-
-=begin
-    Inserts a word into the trie.
-    :type word: String
-    :rtype: Void
-=end
+    # Inserts a word into the trie.
+    # :type word: String
+    # :rtype: Void
     def insert(word)
         children = @root.children
 
@@ -50,12 +44,9 @@ class Trie
         end
     end
 
-
-=begin
-    Returns if the word is in the trie.
-    :type word: String
-    :rtype: Boolean
-=end
+    # Returns if the word is in the trie.
+    # :type word: String
+    # :rtype: Boolean
     def search(word)
         t = search_node(word)
 
@@ -66,12 +57,9 @@ class Trie
         end
     end
 
-
-=begin
-    Returns if there is any word in the trie that starts with the given prefix.
-    :type prefix: String
-    :rtype: Boolean
-=end
+    # Returns if there is any word in the trie that starts with the given prefix.
+    # :type prefix: String
+    # :rtype: Boolean
     def starts_with(prefix)
         if search_node(prefix) == nil
           return false
